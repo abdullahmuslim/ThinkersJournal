@@ -1,0 +1,147 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  background-color: #cdd5e0;
+  font-size: 15pt;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin-bottom: 10px;
+}
+#trans {
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#menu {
+  height: 30px;
+  padding: 5px;
+}
+nav{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  width: 100vw;
+}
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  height: 100vh;
+  width: 70vw;
+  transition: left 0.3s ease-in-out;
+  background-color: #000000;
+}
+nav li{
+  list-style-type: none;
+  padding-block: 10px;
+  margin-block: 5px;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main > section {
+  margin-top: 20px;
+}
+main section  p {
+  padding-block: 5px;
+  text-align: left;
+  margin-block: 5px;
+}
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(9/22 *100vw);
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)), url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+}
+#home p{
+  color: #bdcabe;
+}
+main > section > div {
+  border: 2pt solid #ffffff;
+  border-radius: calc((100vw - 50px) * 0.05);
+  box-shadow: -9px -9px 16px #ffffff, 9px 9px 16px #a3b1c6;
+  background-color: #e7eef5;
+  width: calc(100vw - 50px);
+  padding: 10px;
+  margin-block: 20px;
+}
+@media only screen and (min-width: 1024px){
+  .mobile{
+    display: none;
+  }
+  #trans {
+    display: none;
+  }
+  nav {
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+  }
+  nav ul{
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    background-color: transparent;
+  }
+  ul li{
+    padding: 10px;
+    margin-block: 5px;
+  }
+  nav li:last-child {
+    position: absolute;
+    right: 5px;
+  }
+  #home {
+    height: calc(100vh - 40px);
+  }
+  main > section > div {
+    padding: 20px;
+    border-radius: calc((100vw - 100px) * 0.05);
+    width: calc(100vw - 100px);
+  }
+}

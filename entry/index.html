@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up & Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <section id="signup">
+      <h1>Thinkers Journal</h1>
+      <h2>Sign up</h2>
+      <form>
+        <div>
+          <img src="/images/null.png"><input id="signupFullname" type="text" placeholder="full name" required>
+        </div>
+        <div>
+          <img src=""><input id="signupUsername" type="text" placeholder="user name" required>
+        </div>
+        <div>
+          <img src=""><input id="signupPassword" type="password" placeholder="password" required>
+        </div>
+        <div>
+          <img src=""><input id="signupEmail" type="email" placeholder="E-mail" required>
+        </div>
+        <input type="submit" value="Register">
+        <p>Are you already a member ? <a href="javascript:switchForm();">Login</a></p>
+      </form>
+    </section>
+    <section id="login">
+      <h1>Thinkers Journal</h1>
+      <h2>Login</h2>
+      <form>
+        <div>
+          <img src=""><input type="text" placeholder="username or email" required>
+        </div>
+        <div>
+          <img src=""><input type="password" placeholder="password" required>
+        </div>
+        <input type="submit" value="Login">
+      </form>
+      <p><a href="">forgotten password</a> <span>or</span> <a href="javascript:switchForm();">Sign up</a></p>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
